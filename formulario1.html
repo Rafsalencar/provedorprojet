@@ -108,7 +108,7 @@
     function validarCPF() {
 	const cpf = document.getElementByID('cpf').value.replace(/\D/g, '');
 
-	if (cpf.lenght !== 14) {
+	if (cpf.lenght != 14) {
 		alert("Por favor digite o número completo do CPF.");
 		return false;
 	}
