@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rafa Telecom - Conectando Você</title>
+    <link rel="stylesheet" type="text/css" href="https://rafsalencar.github.io/provedorprojet/style.css">
+</head>
+    
+<body>
+
+<header>
+    <h1> Rafa Telecom </h1>
+    <p>Conectando você ao mundo</p>
+</header>
+
+<nav>
+    <a href="https://rafsalencar.github.io/provedorprojet/">Início</a>
+    <a href="https://rafsalencar.github.io/provedorprojet/planos.html">Planos</a>
+    <a href="#">Cobertura</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section class="hero">
+    
+    <h1>Internet Rápida e Confiável</h1>
+    
+</section>
+
+<section class="contact-section" id="contato">
+    <h2> Informações do Cliente </h2>
+    <form 
+        id="contact-form"
+        action="https://formspree.io/f/mdkezryl" 
+        method="POST">
+        <input type="text" id="plano" name="Plano" value="Plano 100Mbps"> <br>
+        <input type="text" id="nome" name="Nome" placeholder="Seu nome" required>
+        <input type="text" id="cpf" maxlength="14" name="CPF" placeholder="Seu CPF" oninput="formatarCPF(this)" required>
+	<input type="text" id="rg" maxlength="8" name="RG" placeholder="Seu RG com digito Verificador" required>
+	<input type="text" id="endereco" name="Endereço" placeholder="Seu Endereço (Rua, Número e Cidade)" required>
+	<input type="text" id="bairro" name="Bairro" placeholder="Seu Bairro" required>
+	<h1> Data de Nascimento </h1>
+	<input type="date" id="dataNasc" name="Data de Nascimento" placeholder="Sua Data de Nascimento" required>
+        <input type="email" id="email" name="Email" placeholder="Seu e-mail" required>
+        <input type="tel" id="telefone" name="Telefone" placeholder="Seu telefone">
+	<label>
+		<input type="radio" id="dataVenc10" name="Data de Vencimento" value="Dia 10">
+		Dia 10
+	</label>
+	<label>
+		<input type="radio" id="dataVenc12" name="Data de Vencimento" value="Dia 12">
+		Dia 12
+	</label>
+	<label>
+		<input type="radio" id="dataVenc15" name="Data de Vencimento" value="Dia 15">
+		Dia 15
+	</label>
+	<label>
+		<input type="radio" id="dataVenc17" name="Data de Vencimento" value="Dia 17">
+		Dia 17
+	</label>
+	<label>
+		<input type="radio" id="dataVenc20" name="Data de Vencimento" value="Dia 20">
+		Dia 20
+	</label>
+	<label>
+		<input type="radio" id="dataVenc22" name="Data de Vencimento" value="Dia 22">
+		Dia 22
+	</label>
+	    
+        <button type="submit">Enviar mensagem</button>
+        
+    </form>
+    <div id="success-message" style="display:none; margin-top:20px; color:green; font-weight:bold;"> ✅ Sua mensagem foi enviada com sucesso! Entraremos em contato em breve. </div>
+
+    <script>
+    document.getElementById("contact-form").addEventListener("submit", async function(event){
+        event.preventDefault();
+        const form = event.target;
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        if (response.ok) {
+            form.reset();
+            document.getElementById("success-message").style.display = "block";
+        } else {
+            alert("⚠️ Houve um erro no envio. Tente novamente mais tarde.");
+        }
+    });
+
+    function formatarCPF(campo) {
+        let cpf = campo.value.replace(/\D/g, '');
+
+        if (cpf.length > 3) cpf = cpf.replace(/^(\d{3})(\d)/, '$1.$2');
+        if (cpf.length > 6) cpf = cpf.replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3');
+        if (cpf.length > 9) cpf = cpf.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, '$1.$2.$3-$4');
+
+        campo.value = cpf;
+    }
+
+        
+    
+	    
+    </script>
+    <div id="toast" class="toast">Sua mensagem foi enviada com sucesso!</div>
+
+
+</section>
+
+<footer>
+    <p>&copy; 2025 Rafael Salomão - Todos os direitos reservados</p>
+</footer>
+
+   
+
+
+</body>
+</html>
