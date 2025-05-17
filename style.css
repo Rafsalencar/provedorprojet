@@ -86,10 +86,7 @@
         text-align: center;
         margin-bottom: 20px;
     }
-    .justificado {
-            text-align: justify;
-    }    
-
+  
     form {
         display: flex;
         flex-direction: column;
