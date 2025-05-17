@@ -2,9 +2,6 @@
         box-sizing: border-box;
     }
     body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
         font-family: 'Arial', sans-serif;
         margin: 0;
         background-color: #f4f4f4;
@@ -119,7 +116,8 @@
         background-color: #003366;
         color: white;
         text-align: center;
-        padding: 15px;
+        padding: 40px;
+        magin-top:40px
         
        
     }
