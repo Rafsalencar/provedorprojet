@@ -118,16 +118,9 @@
         text-align: center;
         padding: 20px;
         margin-top: 40px;
+        position: fixed;
     }
-        .rodape {
-                background-color: #003366;
-                color: white;
-                text-align: center;
-                padding: 20px;
-                margin-top: 40px;
-                z-index:10;
-                position: fixed;
-            }
+
 
     @keyframes fadeInDown {
         from {opacity: 0; transform: translateY(-30px);}
