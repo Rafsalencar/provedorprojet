@@ -35,8 +35,8 @@
         method="POST">
         <input type="text" id="plano" name="Plano" value="Plano 250Mbps"> <br>
         <input type="text" id="nome" name="Nome" placeholder="Seu nome" required>
-        <input type="text" id="cpf" maxlength="14" name="CPF" placeholder="Seu CPF" oninput="formatarCPF(this)" required>
-	<input type="text" id="rg" maxlength="8" name="RG" placeholder="Seu RG com digito Verificador" required>
+        <input type="text" id="cpf" required maxlength="14" name="CPF" placeholder="Seu CPF" oninput="formatarCPF(this)">
+	<input type="text" id="rg" required maxlength="8" pattern="\d{8}" name="RG" placeholder="Seu RG com digito Verificador">
 	<input type="text" id="endereco" name="Endereço" placeholder="Seu Endereço (Rua, Número e Cidade)" required>
 	<input type="text" id="bairro" name="Bairro" placeholder="Seu Bairro" required>
         <input type="email" id="email" name="Email" placeholder="Seu e-mail" required>
