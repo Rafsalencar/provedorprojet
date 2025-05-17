@@ -43,46 +43,7 @@
     </div>
 </section>
 
-<section class="contact-section" id="contato">
-    <h2>Fale Conosco</h2>
-    <form 
-        id="contact-form"
-        action="https://formspree.io/f/mdkezryl" 
-        method="POST">
-       
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <input type="tel" name="telefone" placeholder="Seu telefone">
-        <button type="submit">Enviar mensagem</button>
-        
-    </form>
-    <div id="success-message" style="display:none; margin-top:20px; color:green; font-weight:bold;"> ✅ Sua mensagem foi enviada com sucesso! Entraremos em contato em breve. </div>
 
-    <script>
-    document.getElementById("contact-form").addEventListener("submit", async function(event){
-        event.preventDefault();
-        const form = event.target;
-        const data = new FormData(form);
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        if (response.ok) {
-            form.reset();
-            document.getElementById("success-message").style.display = "block";
-        } else {
-            alert("⚠️ Houve um erro no envio. Tente novamente mais tarde.");
-        }
-        
-    });
-    </script>
-    <div id="toast" class="toast">Sua mensagem foi enviada com sucesso!</div>
-
-
-</section>
 
 <footer>
     <p>&copy; 2025 Rafael Salomão - Todos os direitos reservados </p>
