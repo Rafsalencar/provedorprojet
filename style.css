@@ -34,7 +34,7 @@
     }
     .hero {
         background: url('https://images.unsplash.com/photo-1581093588401-12c3f3f6f76b?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-        color: blue;
+        color: gray;
         height: 400px;
         display: flex;
         align-items: center;
@@ -44,7 +44,6 @@
         animation: fadeIn 2s ease;
     }
     .hero h1 {
-        font-color: blue;
         font-size: 50px;
         margin: 0;
     }
