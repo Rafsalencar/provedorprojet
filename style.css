@@ -66,9 +66,11 @@
         gap: 30px;
         padding: 0 20px;
     }
-    .content iframe {
-            text-align: center;
-    }
+    .iframe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
     .card {
         color: white;
         background-color: #0055aa;
