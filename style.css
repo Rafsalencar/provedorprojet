@@ -48,6 +48,11 @@
         font-size: 50px;
         margin: 0;
     }
+    .hero h2 {
+        color: white;
+        font-size: 50px;
+        margin: 0;
+    }
     .hero p {
         color: white;
         font-size: 22px;
