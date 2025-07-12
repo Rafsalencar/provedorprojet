@@ -66,6 +66,9 @@
         gap: 30px;
         padding: 0 20px;
     }
+    .content inframe {
+            position: center;
+    }
     .card {
         color: white;
         background-color: #0055aa;
