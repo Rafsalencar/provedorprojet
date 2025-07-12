@@ -2,7 +2,7 @@
         box-sizing: border-box;
     }
     body {
-        background-image: url('https://rafsalencar.github.io/provedorprojet/imgBd.png');
+        background-image: url('https://rafsalencar.github.io/provedorprojet/imgBd1.png');
         font-family: 'Arial', sans-serif;
         margin: 0;
         background-size: cover;
@@ -44,10 +44,12 @@
         animation: fadeIn 2s ease;
     }
     .hero h1 {
+        color: white;
         font-size: 50px;
         margin: 0;
     }
     .hero p {
+        color: white;
         font-size: 22px;
         margin-top: 10px;
     }
